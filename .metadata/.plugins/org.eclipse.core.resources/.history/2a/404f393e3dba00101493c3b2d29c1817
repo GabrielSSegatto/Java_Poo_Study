@@ -1,0 +1,27 @@
+package exemplo;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+@RestController
+@RequestMapping("/api/pessoa")
+
+public class PessoaController {
+
+	@GetMapping
+	public List<String> ListarPessoas(){
+		List<String> pessoas = new ArrayList<String>();
+		pessoas.add("Molina");
+		pessoas.add("José");
+		return pessoas;
+		
+	}
+	
+	
+}
